@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+@media screen and (max-width: 400px) {
+  .emp {
+    font-size: 13px;
+    width: 20%;
+  }
+
+  .emp-table h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .remove-filter-btn {
+    font-size: 16px;
+    margin: 5px 6px;
+  }
+
+  .new-form{
+    width: 90%;
+  }
+}

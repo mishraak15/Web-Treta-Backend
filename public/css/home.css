@@ -1,0 +1,91 @@
+
+h2{
+ text-align: center;
+ margin: 10px 0;
+}
+
+.btn-box{
+    display: flex;
+    gap: 10px;
+}
+
+.emp-table{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.single-emp{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.emp{
+    font-size: 18px;
+    width: 30%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.emp-age{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.emp-salary{
+    display: flex;
+    justify-content: center;
+}
+
+
+.emp-table h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sort-btn{
+    border: none;
+    background-color: transparent;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.cross-btn{
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.remove-filter-btn{
+    font-size: 17px;
+    margin: 5px 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form button{
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.search-form button, .search-form input{
+   padding: 3px 5px;
+   font-size: 16px;
+   outline: none;
+}

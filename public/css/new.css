@@ -1,0 +1,30 @@
+h2{
+    text-align: center;
+    margin: 5px 0;
+}
+
+.new-form{
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    border-radius: 4px;
+    font-size: 17px;
+
+}
+
+.new-form input{
+    padding: 2px 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.submit-btn{
+    font-size: 15px;
+    cursor: pointer;
+    padding: 1px 5px;
+    width: fit-content;
+}

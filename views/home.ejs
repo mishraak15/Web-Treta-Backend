@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Treta</title>
+    <link  rel="stylesheet" href="css/home.css" />
+    <link  rel="stylesheet" href="css/root.css" />
+    <script  src="js/script.js"></script>
+  </head>
+  <body>
+
+    <h2>All Employee Details</h2>
+
+    <form action="/search" method="post" class="search-form">
+        <input type="text" name="search" placeholder="Search via FullName " required>
+        <button>Search</button>
+    </form>
+
+    <div class="btn-box">
+        <a href="/">
+            <button class="remove-filter-btn">Remove All Filter</button>
+        </a>
+    <br>
+        <a href="/addemployee">
+            <button class="remove-filter-btn">Add Employee</button>
+        </a>
+    </div>
+   
+<% if(allEmployees.length>0){ %>
+    <div class="emp-table">
+      <div class="single-emp">
+        <h3 class="emp emp-name">
+          First Name
+          <form method="post" action="/sortbyname" onsubmit="{submitHandler()}">
+            <button class="sort-btn">&#11206;</button>
+          </form>
+        </h3>
+
+        <h3 class="emp emp-name">
+          Last Name
+          <form method="post" action="/sortbylastname" onsubmit="{submitHandler()}">
+            <button class="sort-btn">&#11206;</button>
+          </form>
+        </h3>
+
+        <h3 class="emp emp-salary">
+          Salary
+          <form
+            method="post"
+            action="/sortbysalary"
+            onsubmit="{submitHandler()}"
+          >
+            <button class="sort-btn">&#11206;</button>
+          </form>
+        </h3>
+
+        <h3 class="emp emp-age">
+          Age
+          <form method="post" action="/sortbyage" onsubmit="{submitHandler()}">
+            <button class="sort-btn">&#11206;</button>
+          </form>
+        </h3>
+      </div>
+
+      <hr />
+
+      <% for(let employee of allEmployees){ %>
+      <div class="single-emp">
+        <div class="emp emp-name"><%=employee?.employee_name.split(" ")[0]%></div>
+        <div class="emp emp-name"><%=employee?.employee_name.split(" ")[1]%></div>
+        <div class="emp emp-salary"><%=employee?.employee_salary%></div>
+        <div class="emp emp-age"><%=employee?.employee_age%></div>
+        <form method="post" action= "/deleteemployee/<%=employee?._id%>" onsubmit="{submitHandler()}">
+            <button class="emp cross-btn"> &#10060; </button>
+          </form>
+      </div>
+      <hr />
+      <% } %>
+    </div>
+   <%  }%>
+
+   <% if(allEmployees.length==0){ %>
+       <h2>No Employee Found!!</h2>
+    <% } %>
+  </body>
+</html>
